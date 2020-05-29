@@ -1,0 +1,42 @@
+<p>select-by-id works!</p>
+
+<h1 style="text-align: center;">Fetch Record By ProductId</h1>
+<br>
+
+<div class="example-container" style="text-align: center;">
+    <mat-form-field appearance="fill">
+      <mat-label>Enter ProductId</mat-label>
+      <input #todo matInput type="text" name="todo" placeholder="Please Enter ProductId">
+    </mat-form-field>
+  <!--h1>{{todo.value}}</h1-->
+   <div>
+    <button (click) = "fetchByPId(todo.value)" mat-flat-button color="accent">Submit</button>
+   </div>
+    
+  </div>
+<br>
+<div >
+    <table class = "selecttable">
+        <thead>
+            <tr>
+                <th>PId</th>
+                <th>PName</th> 
+                <th>PTitle</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of xy">
+                
+                <td>{{user.PId}}</td>        
+                <td>{{user.PName}}</td>
+                <td>{{user.Ptitle}}</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+<br>
+<br>
+
+<div style="text-align: center;">
+    <button (click)="MoveToHome()" mat-flat-button color="primary">MoveToHome</button>
+</div>

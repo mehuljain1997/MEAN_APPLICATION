@@ -1,0 +1,46 @@
+<p>create works start!</p>
+
+
+<div class="example-container">
+    <mat-form-field appearance="fill">
+      <mat-label>ProductId</mat-label>
+      <input #Productid matInput name= "ProductInputId" placeholder="Enter ProductId">
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+        <mat-label>ProductName</mat-label>
+        <textarea  #Productname matInput name ="ProductInputName" placeholder="Enter Product Name" ></textarea>
+      </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+      <mat-label>ProductType</mat-label>
+      <mat-select #Producttype  matInput name = "ProductInputType" aria-placeholder="Select ProductType" >
+        <mat-option  value="car">car</mat-option>
+        <mat-option value="bike">bike</mat-option>
+        <mat-option value="truck">truck</mat-option>
+        <mat-option  value="TV">TV</mat-option>
+        <mat-option value="Laptop">Laptop</mat-option>
+        <mat-option value="scooty">scooty</mat-option>
+        <mat-option  value="Bus">Bus</mat-option>
+        <mat-option value="Aeroplane">Aeroplane</mat-option>
+        <mat-option value="Mobile">Mobile</mat-option>
+
+
+
+      </mat-select>
+    </mat-form-field>
+    <br>
+    
+        <button (click) = "createfunction(Productid.value, Productname.value, Producttype.value)" mat-flat-button color="accent">Submit</button>
+   
+   
+    
+  
+  </div>
+  <br>
+ 
+  <br>
+  <div style="text-align:center;">
+    <button (click)="BackToHome()" mat-flat-button color="accent">Back To Home</button>
+    
+</div>

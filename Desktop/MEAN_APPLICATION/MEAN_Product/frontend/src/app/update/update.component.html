@@ -1,0 +1,67 @@
+<p>update works!</p>
+
+<h3 >{{xy}}</h3>
+
+
+<div class="example-container" style="text-align: center;">
+    <mat-form-field appearance="fill">
+      <mat-label>ProductId</mat-label>
+      <input #Productid matInput name= "Productid" placeholder="Enter ProductId">
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+        <mat-label>ProductName</mat-label>
+        <textarea  #Productname matInput name ="Productname" placeholder="Enter Product Name" ></textarea>
+      </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+      <mat-label>Product Type</mat-label>
+      <mat-select #Producttype  matInput name = "Producttype" aria-placeholder="Select ProductType" >
+        <mat-option  value="car">car</mat-option>
+        <mat-option value="bike">bike</mat-option>
+        <mat-option value="truck">truck</mat-option>
+        <mat-option  value="TV">TV</mat-option>
+        <mat-option value="Laptop">Laptop</mat-option>
+        <mat-option value="scooty">scooty</mat-option>
+        <mat-option  value="Bus">Bus</mat-option>
+        <mat-option value="Aeroplane">Aeroplane</mat-option>
+        <mat-option value="Mobile">Mobile</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <br>
+    
+        <button (click) = "updatefunction(Productid.value, Productname.value, Producttype.value)" mat-flat-button color="accent">Submit</button>
+   
+   
+    
+  
+  </div>
+
+  <br>
+
+
+<!--div>
+    <table class = "selecttable">
+        <thead>
+            <tr>
+                <th>PId</th>
+                <th>PName</th> 
+                <th>PTitle</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of xy">
+                
+                <td>{{user.PId}}</td>        
+                <td>{{user.PName}}</td>
+                <td>{{user.Ptitle}}</td>
+            </tr>
+        </tbody>
+    </table>
+    </div-->
+    <br>
+    <br>
+
+  <div style="text-align: center;">
+<button (click)="UpdateToHome()" mat-flat-button color="primary">UpdateToHome</button>
+  </div>

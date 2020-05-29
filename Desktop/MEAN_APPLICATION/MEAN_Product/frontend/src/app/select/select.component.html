@@ -1,0 +1,33 @@
+<p>select works!</p>
+<h2 style="text-align: center;">All  Record OF  Products </h2>
+
+
+
+<div >
+<table class = "selecttable">
+    <thead>
+        <tr>
+            <th>PId</th>
+            <th>PName</th> 
+            <th>PTitle</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of xy">
+            
+            <td>{{user.PId}}</td>        
+            <td>{{user.PName}}</td>
+            <td>{{user.Ptitle}}</td>
+            <td>  <button (click)="deleteRow(user.PId)" mat-flat-button color="accent">Delete Row</button></td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<br>
+
+<div style="text-align:center;">
+    <button (click)="BackToHome()" mat-flat-button color="accent">Back To Home</button>
+    
+</div>
+
+

@@ -1,0 +1,57 @@
+<p>home works start!</p>
+
+<h3 style="text-align: center; color:greenyellow;">Select  Any Operation </h3>
+<br>
+<div class="example-button-row" style="text-align: center; ">
+  <button (click)="navigate1()" mat-flat-button color="warn" >Add Product</button>&nbsp;&nbsp;&nbsp;
+  <button (click)="DeleteRecord()" mat-flat-button color="primary">Delete  Product</button>&nbsp;&nbsp;&nbsp;
+  <button (click)="SelectRecord()" mat-flat-button color="accent">Select All Product</button>&nbsp;&nbsp;&nbsp;
+  <button (click)="SelectByPId()" mat-flat-button color="warn">Select Product By Id</button>&nbsp;&nbsp;&nbsp;
+  <button (click)="UpdateRecord()" mat-flat-button color="primary">Update Product</button>&nbsp;&nbsp;&nbsp;
+
+
+  <button mat-flat-button disabled>Disabled</button>
+  <a mat-flat-button routerLink="">Link</a>
+</div>
+
+<br>
+<mat-form-field appearance="fill">
+  <mat-label>Select Operation</mat-label>
+  <mat-select #SelectedOperation  matInput name = "SelectedData" aria-placeholder="Select ProductType" (selectionChange)="selectedOperation($event.value)" >
+    <mat-option  value="create" >Create</mat-option>
+    <mat-option value="delete" >Delete</mat-option>
+    <mat-option value="selectAll">SelectAll</mat-option>
+    <mat-option  value="seleteById">SelectById</mat-option>
+    <mat-option value="update">Update</mat-option>
+  </mat-select>
+</mat-form-field>
+
+
+<br>
+<select  id="selectid" class="form-control-mb-12" (change)="modo($event.target.value)" style="text-align: center;">
+  <option value="">Select option</option>
+  <option value="mod1">Create</option>
+  <option value="mod2">Delete</option>
+  <option value="mod3">SelectAll</option>
+  <option value="mod4">SelectByPId</option>
+  <option value="mod5">Update</option>
+</select>
+
+
+<br>
+<br>
+
+
+
+<div>
+  <!--mat-form-field>
+    <mat-label>Select Value</mat-label>
+    <mat-select></mat-select>
+  </mat-form-field-->
+  <select #selectedValue (change)="selectedOperation(selectedValue.value)">
+    <option>Render Array value</option>
+
+    <option *ngFor="let prf of selectvalue " value={{prf}} >{{prf}}</option>
+  </select>
+    </div>
+
